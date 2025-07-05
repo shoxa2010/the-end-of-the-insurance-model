@@ -1,0 +1,126 @@
+.were__container {
+    align-items: center;
+    margin-top: 300px;
+    margin-bottom: 158px;
+}
+
+.were__title {
+    font-family: "DM Serif Display";
+    font-weight: 400;
+    font-size: 72px;
+    line-height: 64px;
+    letter-spacing: -1px;
+    position: relative;
+    padding-top: 64px;
+    color: rgb(43, 39, 47);
+
+    &::after {
+        position: absolute;
+        width: 150px;
+        height: 1px;
+        content: "";
+        background-color: rgba(0, 0, 0, 1);
+        left: 0;
+        top: 0;
+    }
+}
+
+.were__list {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 96px;
+
+}
+
+.were__item {
+    width: 315px;
+    margin: 0 auto;
+    margin-right: 10px;
+
+    &:first-child {
+        .were__item-title {
+            background: url(../../img/vine.png) no-repeat left top;
+            top: 0;
+            left: 0;
+
+        }
+    }
+
+    &:nth-child(2) {
+        .were__item-title {
+            background: url(../../img/mony.png) no-repeat left top;
+            top: 0;
+            left: 0;
+
+        }
+    }
+
+    &:last-child {
+        .were__item-title {
+            background: url(../../img/man.png) no-repeat left top;
+            top: 0;
+            left: 0;
+
+        }
+    }
+}
+
+.were__item-title {
+    padding-top: 118px;
+    font-family: "DM Serif Display";
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 100%;
+    letter-spacing: -0.39px;
+    margin-bottom: 16px;
+    position: relative;
+}
+
+.were__item-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0px;
+
+}
+
+@media only screen and (max-width:830px) {
+    .were__title {
+        font-family: "DM Serif Display";
+        font-weight: 400;
+        font-size: 48px;
+        line-height: 48px;
+        letter-spacing: -0.67px;
+        text-align: center;
+        &::after{
+            left: 40%;
+            background-color: hsla(296, 30%, 68%, 1);
+        }
+    }
+    .were__list {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 56px;
+        text-align: center;
+        
+    }
+    .were__item{
+        margin: 0 auto;
+        &:first-child{
+            .were__item-title{
+            background-position: center top;
+            }
+        }
+        &:nth-child(2){
+            .were__item-title{
+            background-position: center top;
+            }
+        }
+        &:last-child{
+            .were__item-title{
+            background-position: center top;
+            }
+        }
+    }
+}
