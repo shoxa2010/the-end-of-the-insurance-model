@@ -12,7 +12,7 @@
   font-family: "Karla";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/karla-v31-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("../fonts/karla-v32-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* karla-700 - latin */
 @font-face {
@@ -20,7 +20,7 @@
   font-family: "Karla";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/karla-v31-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("../fonts/karla-v32-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 * {
   box-sizing: border-box;
@@ -37,7 +37,7 @@ a {
 }
 
 body {
-  font-family: "Karla", sans-serif;
+  font-family: "Karla";
 }
 
 .visually-hidden {
@@ -63,11 +63,6 @@ body {
 
 .header {
   padding: 5px 0 5px 0;
-  font-family: "Karla";
-  font-weight: 700;
-  font-size: 13px;
-  line-height: 100%;
-  letter-spacing: 1.5px;
   text-align: center;
 }
 
@@ -222,7 +217,7 @@ body {
 }
 
 .intro__title {
-  font-family: "DM Serif Display", sans-serif;
+  font-family: "DM Serif Display";
   font-weight: 400;
   font-size: 72px;
   line-height: 64px;
@@ -414,7 +409,7 @@ body {
     text-align: center;
   }
   .were__title::after {
-    left: 40%;
+    left: 20%;
     background-color: hsl(296, 30%, 68%);
   }
   .were__list {
@@ -508,6 +503,12 @@ body {
     margin-bottom: 50px;
   }
 }
+@media only screen and (max-width: 975px) {
+  .info__link {
+    font-size: 10px;
+    padding: 10px 20px;
+  }
+}
 .footer {
   margin-top: 140px;
   margin-bottom: 64px;
@@ -515,14 +516,15 @@ body {
 }
 .footer::after {
   position: absolute;
-  width: 530px;
-  height: 230px;
+  width: 100%;
+  height: 250px;
   content: "";
   background-image: url(../../img/footer__img.png);
   background-repeat: no-repeat;
   background-position: left top;
   top: -30%;
   left: 0;
+  z-index: 0;
 }
 
 .footer__logo-container {
@@ -530,13 +532,18 @@ body {
   display: flex;
   justify-content: space-between;
   margin-bottom: 36px;
+  z-index: 90;
+}
+
+.footer__logo {
+  z-index: 90;
 }
 
 .footer__svg {
   color: #837D88;
   cursor: pointer;
   margin-right: 16px;
-  z-index: 99;
+  z-index: 90 !important;
 }
 .footer__svg:last-child {
   margin-right: 0;
@@ -555,6 +562,22 @@ body {
   margin-right: 0;
 }
 
+.footer__icon-svg {
+  z-index: 90;
+}
+
+.footer__icon-list {
+  display: flex;
+  justify-content: center;
+}
+
+.footer__icon-item {
+  margin-right: 16px;
+}
+.footer__icon-item:last-child {
+  margin-right: 0;
+}
+
 .footer__wrapper {
   display: flex;
   justify-content: space-between;
@@ -563,11 +586,11 @@ body {
 }
 .footer__wrapper::after {
   position: absolute;
-  width: 1110px;
+  width: 100%;
   height: 1px;
   content: "";
   top: 0;
-  background-color: hsl(0, 0%, 86%);
+  background-color: rgb(219, 219, 219);
 }
 
 .footer__title {
@@ -581,7 +604,7 @@ body {
 }
 
 .footer__item-link {
-  font-family: "Karla";
+  font-family: "Karla", sans-serif;
   font-weight: 700;
   font-size: 13px;
   line-height: 100%;
@@ -594,39 +617,6 @@ body {
   border-bottom: 1px solid rgb(44, 40, 48);
 }
 
-@media only screen and (max-width: 1145px) {
-  .footer__wrapper::after {
-    width: 900px;
-  }
-}
-@media only screen and (max-width: 768px) {
-  .footer__wrapper::after {
-    width: 702px;
-  }
-  .footer::after {
-    top: -30%;
-  }
-}
-@media only screen and (max-width: 727px) {
-  .footer__wrapper::after {
-    width: 680px;
-  }
-}
-@media only screen and (max-width: 705px) {
-  .footer__wrapper::after {
-    width: 650px;
-  }
-}
-@media only screen and (max-width: 685px) {
-  .footer__wrapper::after {
-    width: 630px;
-  }
-}
-@media only screen and (max-width: 655px) {
-  .footer__wrapper::after {
-    width: 600px;
-  }
-}
 @media only screen and (max-width: 626px) {
   .footer__logo-container {
     display: flex;
@@ -646,9 +636,6 @@ body {
     gap: 56px;
     text-align: center;
   }
-  .footer__wrapper::after {
-    width: 300px;
-  }
   .footer__text-container {
     margin: 0 auto;
   }
@@ -661,10 +648,6 @@ body {
   .footer::after {
     top: -10%;
     right: 10%;
-  }
-}
-@media only screen and (max-width: 514px) {
-  .footer::after {
-    width: 390px;
+    z-index: 1;
   }
 }
